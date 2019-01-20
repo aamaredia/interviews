@@ -1,9 +1,13 @@
 # Tic Tac Toe Challenge
 
 ## Setup and run:
-    pip install -r requirements.txt
-    pip install -U .
-    python tictactoe/app.py
+Written in python 3.7.1
+
+```
+pip install -r requirements.txt
+pip install -U .
+python tictactoe/app.py
+```
 
 ## Playing
 Create a game:
