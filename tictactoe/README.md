@@ -1,7 +1,7 @@
 # Tic Tac Toe Challenge
 
 ## Setup and run:
-Written in python 3.7.1
+Written in python 3.7.1. Postgres used for database.
 
 ```
 pip install -r requirements.txt
@@ -51,3 +51,13 @@ Which will return you the game state:
   'closed': False,
   'winner': None}
 ```
+
+## Implementation/Analysis
+The implementation is done using Flask with a couple of helpful plugins.
+
+* Flask-RESTful: Handled a lot of the boilerplate for creating REST APIs
+* FlaskSQLAlchemy: For the model and database communication layer
+
+A single "Games" model is stored in the database. There's a few design choices to be made here, but the most interesting is the board. Since postgres was used for the database, SQLAlchemy has support for multidimensional arrays, so a 2D integer array was stored in the database
+
+The rest of the API is pretty straight forward, though a few shortcuts were made (specifically in regards to some getattr's). There's an interesting Flask-SQLAlchemy issue when trying to update a 2D Array, hence a terrible double statement execution. The game_state function is also grizzly to say the least. Both of which could use refactoring and optimizations.
