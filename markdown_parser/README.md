@@ -1,6 +1,7 @@
 # Markdown to HTML Parser
 
 ## Problem Statement
+```
 Write a simplified Markdown to HTML converter using the language of your choice.
 
 Example input Markdown string: "# This is a header\nThis is a paragraph\n* This is a list item\n* Another list item"
@@ -46,7 +47,7 @@ This is a paragraph     | <p>This is a paragraph</p>
                         |
 Another paragraph       |
 --------------------------------------------------------- 
-
+```
 ## Notes
 This was scheduled for 30 mins and did not complete in the 30, took over an hour to write this out.
 
